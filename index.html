@@ -3,198 +3,501 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BidaTech AI Engineering Roadmap</title>
+    <title>BidaTech AI Engineering Training Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
-        body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #f8fafc; }
-        .glass-card {
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
+        }
+        .accent-gradient {
+            background: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%);
+        }
+        .card-blur {
             background: rgba(30, 41, 59, 0.7);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
-        .glass-card:hover {
-            border-color: #38bdf8;
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px -15px rgba(56, 189, 248, 0.3);
+        .phase-tab.active {
+            background: linear-gradient(90deg, #2563eb 0%, #7c3aed 100%);
+            color: white;
         }
-        .phase-gradient-1 { background: linear-gradient(135deg, #3b82f6 0%, #2dd4bf 100%); }
-        .phase-gradient-2 { background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%); }
-        .phase-gradient-3 { background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%); }
-        .rule-card { border-left: 4px solid #f43f5e; }
     </style>
 </head>
-<body class="p-4 md:p-10">
+<body class="text-slate-200 min-h-screen gradient-bg selection:bg-indigo-500 selection:text-white">
 
-    <!-- Header Section -->
-    <header class="max-w-6xl mx-auto text-center mb-16">
-        <div class="inline-block px-4 py-1 border border-sky-500/50 rounded-full text-sky-400 text-sm font-bold mb-4 tracking-widest uppercase">
-            Training Program 2024
+    <header class="border-b border-slate-800 bg-slate-900/50 sticky top-0 z-50 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="p-2.5 bg-indigo-600 rounded-xl text-white shadow-lg shadow-indigo-500/30">
+                    <i class="fa-solid fa-laptop-code text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
+                        BidaTech <span class="text-xs accent-gradient px-2 py-0.5 rounded-full uppercase font-semibold">AI Engineering</span>
+                    </h1>
+                    <p class="text-xs text-slate-400">10-Day Training Roadmap</p>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center space-x-4">
+                <span class="text-xs text-slate-400 font-medium bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-700">
+                    <i class="fa-solid fa-calendar-days text-indigo-400 mr-1.5"></i> Self-Learning Program
+                </span>
+            </div>
         </div>
-        <h1 class="text-4xl md:text-6xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">
-            BidaTech AI Engineering 🚀
-        </h1>
-        <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto">
-            From absolute coding basics to building and containerizing autonomous AI web applications for local businesses.
-        </p>
     </header>
 
-    <main class="max-w-6xl mx-auto">
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         
-        <!-- PHASE 1 -->
-        <section class="mb-20">
-            <div class="flex items-center gap-4 mb-8">
-                <div class="h-10 w-10 rounded-lg phase-gradient-1 flex items-center justify-center font-bold">1</div>
-                <h2 class="text-2xl font-bold uppercase tracking-wider">Phase 1: Environment, Git & Prompting</h2>
-            </div>
+        <div class="mb-12 relative rounded-2xl overflow-hidden p-8 md:p-12 card-blur border border-indigo-500/20 shadow-2xl">
+            <div class="absolute top-0 right-0 -mt-12 -mr-12 w-72 h-72 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 -mb-12 -ml-12 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl pointer-events-none"></div>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Day 1 -->
-                <div class="glass-card p-6 rounded-2xl relative overflow-hidden">
-                    <span class="text-sky-400 font-bold text-sm">DAY 01</span>
-                    <h3 class="text-xl font-bold mb-3">Python & Git Basics</h3>
-                    <p class="text-slate-400 text-sm mb-4">Learn CLI basics, Python installation, and fundamental Git commands.</p>
-                    <div class="space-y-3 mb-6">
-                        <div class="flex items-start gap-2 text-xs text-slate-300">
-                            <i class="fas fa-check-circle text-sky-500 mt-1"></i>
-                            <span>git init, add, commit</span>
+            <div class="relative z-10 max-w-3xl">
+                <span class="text-xs font-bold tracking-widest text-indigo-400 uppercase bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20">Welcome Aboard, Team! 🚀</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-4 mb-4 tracking-tight">Master Autonomous AI Applications</h2>
+                <p class="text-base text-slate-300 leading-relaxed">
+                    This comprehensive roadmap is structured to guide you from absolute coding basics to building, automating, and containerizing specialized AI web solutions using Flask, the Google Gen AI SDK, and Docker.
+                </p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <div class="lg:col-span-1 space-y-6">
+                <div class="rounded-xl p-6 bg-slate-900/60 border border-amber-500/20 shadow-xl relative overflow-hidden">
+                    <div class="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-amber-500 to-orange-500"></div>
+                    <h3 class="text-sm font-bold tracking-wider text-amber-400 uppercase mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-triangle-exclamation"></i> 3 Golden Ground Rules
+                    </h3>
+                    <ul class="space-y-4 text-xs leading-relaxed text-slate-300">
+                        <li class="flex items-start gap-2.5">
+                            <span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-amber-500/10 text-amber-400 font-bold text-[10px]">1</span>
+                            <div>
+                                <strong class="text-slate-200 block mb-0.5">Never commit to main directly</strong> 
+                                Work entirely on isolated features and use Pull Requests.
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-amber-500/10 text-amber-400 font-bold text-[10px]">2</span>
+                            <div>
+                                <strong class="text-slate-200 block mb-0.5">Never leak credentials</strong> 
+                                Add <code class="bg-slate-950 px-1 py-0.5 rounded text-amber-300">.env</code> and <code class="bg-slate-950 px-1 py-0.5 rounded text-amber-300">.db</code> to <code class="bg-slate-950 px-1 py-0.5 rounded text-amber-300">.gitignore</code>. Immediately revoke leaked keys.
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-amber-500/10 text-amber-400 font-bold text-[10px]">3</span>
+                            <div>
+                                <strong class="text-slate-200 block mb-0.5">Build with exception handling</strong> 
+                                Guard AI engine blocks using clean <code class="bg-slate-950 px-1 py-0.5 rounded text-amber-300">try-except</code> structures.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="rounded-xl p-3 bg-slate-900/40 border border-slate-800 flex flex-col space-y-1">
+                    <span class="text-[10px] font-bold text-slate-500 tracking-wider uppercase px-3 mb-2">Navigation Phases</span>
+                    <button onclick="switchPhase('all')" id="tab-all" class="phase-tab active w-full text-left px-3 py-2 rounded-lg text-xs font-semibold tracking-wide transition-all duration-200 flex items-center justify-between">
+                        <span>Show Full Roadmap</span>
+                        <span class="bg-slate-950/40 text-[10px] px-1.5 py-0.5 rounded-md font-mono">10 Days</span>
+                    </button>
+                    <button onclick="switchPhase(1)" id="tab-1" class="phase-tab w-full text-left px-3 py-2 rounded-lg text-xs font-medium text-slate-400 hover:bg-slate-800 hover:text-slate-200 transition-all duration-200 flex flex-col gap-0.5">
+                        <span class="font-semibold text-slate-300">Phase 1: Environment & Git</span>
+                        <span class="text-[10px] text-slate-500">Days 1 - 3</span>
+                    </button>
+                    <button onclick="switchPhase(2)" id="tab-2" class="phase-tab w-full text-left px-3 py-2 rounded-lg text-xs font-medium text-slate-400 hover:bg-slate-800 hover:text-slate-200 transition-all duration-200 flex flex-col gap-0.5">
+                        <span class="font-semibold text-slate-300">Phase 2: Flask & Databases</span>
+                        <span class="text-[10px] text-slate-500">Days 4 - 6</span>
+                    </button>
+                    <button onclick="switchPhase(3)" id="tab-3" class="phase-tab w-full text-left px-3 py-2 rounded-lg text-xs font-medium text-slate-400 hover:bg-slate-800 hover:text-slate-200 transition-all duration-200 flex flex-col gap-0.5">
+                        <span class="font-semibold text-slate-300">Phase 3: Automation & Docker</span>
+                        <span class="text-[10px] text-slate-500">Days 7 - 10</span>
+                    </button>
+                </div>
+
+                <div class="rounded-xl p-5 bg-slate-900/40 border border-slate-800 text-center">
+                    <span class="text-[10px] font-bold text-slate-500 tracking-wider uppercase block mb-3">Overall Completion Tracker</span>
+                    <div class="relative inline-flex items-center justify-center mb-2">
+                        <svg class="w-24 h-24 transform -rotate-90">
+                            <circle cx="48" cy="48" r="40" stroke="currentColor" stroke-width="6" class="text-slate-800" fill="transparent" />
+                            <circle cx="48" cy="48" r="40" stroke="currentColor" stroke-width="6" class="text-indigo-500 transition-all duration-500" fill="transparent"
+                                    stroke-dasharray="251.2" stroke-dashoffset="251.2" id="progress-ring" />
+                        </svg>
+                        <span class="absolute text-lg font-bold text-white id font-mono" id="progress-text">0%</span>
+                    </div>
+                    <p class="text-[11px] text-slate-400 mt-1" id="progress-desc">Click daily tasks to mark progress</p>
+                </div>
+            </div>
+
+            <div class="lg:col-span-3 space-y-12">
+                
+                <div id="phase-container-1" class="phase-container space-y-6">
+                    <div class="flex items-center space-x-3 border-b border-slate-800 pb-3">
+                        <div class="h-7 w-7 rounded-lg bg-blue-600/10 text-blue-400 flex items-center justify-center font-bold text-xs">P1</div>
+                        <h3 class="text-lg font-bold tracking-tight text-white">Phase 1: Environment, Git & Prompt Engineering <span class="text-xs text-slate-500 font-normal ml-2">(Days 1–3)</span></h3>
+                    </div>
+
+                    <div class="card-blur rounded-xl p-6 shadow-xl relative group transition-all duration-200 hover:border-slate-700">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+                            <div class="flex items-center space-x-3">
+                                <span class="text-xs font-bold font-mono px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md border border-slate-700">DAY 01</span>
+                                <h4 class="text-base font-bold text-white">Python, Command Line & Git Basics</h4>
+                            </div>
+                            <label class="flex items-center space-x-2 bg-slate-900/60 px-3 py-1.5 rounded-lg border border-slate-800 cursor-pointer select-none text-xs text-slate-400 hover:text-slate-200">
+                                <input type="checkbox" class="day-checkbox rounded border-slate-700 text-indigo-600 focus:ring-indigo-500 bg-slate-950" onchange="calculateProgress()">
+                                <span>Mark Complete</span>
+                            </label>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-2">
+                            <div class="space-y-3">
+                                <h5 class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5"><i class="fa-solid fa-book-open text-[11px] text-indigo-400"></i> Learn Core Concepts</h5>
+                                <p class="text-xs text-slate-300 leading-relaxed">Installing Python 3 & Git; running scripts via terminal (<code class="bg-slate-950 text-indigo-300 px-1 py-0.5 rounded font-mono">python app.py</code>); using basic structural commands (<code class="bg-slate-950 text-indigo-300 px-1 py-0.5 rounded font-mono">git init</code>, <code class="bg-slate-950 text-indigo-300 px-1 py-0.5 rounded font-mono">git add</code>, <code class="bg-slate-950 text-indigo-300 px-1 py-0.5 rounded font-mono">git commit</code>).</p>
+                                <div class="pt-2 flex flex-wrap gap-2">
+                                    <a href="https://www.youtube.com/watch?v=kqtD5dpn9C8" target="_blank" class="inline-flex items-center gap-1.5 text-[11px] bg-red-600/10 text-red-400 border border-red-500/20 px-2.5 py-1 rounded-md hover:bg-red-600 hover:text-white transition-all"><i class="fa-brands fa-youtube text-xs"></i> Python Basics</a>
+                                    <a href="https://www.youtube.com/watch?v=RGOj5yH7evk" target="_blank" class="inline-flex items-center gap-1.5 text-[11px] bg-red-600/10 text-red-400 border border-red-500/20 px-2.5 py-1 rounded-md hover:bg-red-600 hover:text-white transition-all"><i class="fa-brands fa-youtube text-xs"></i> Git Basics</a>
+                                </div>
+                            </div>
+                            <div class="bg-slate-900/40 border border-slate-800 rounded-lg p-4 space-y-2">
+                                <h5 class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5"><i class="fa-solid fa-code text-[11px] text-emerald-400"></i> Engineering Task</h5>
+                                <p class="text-xs text-slate-300 leading-relaxed">Initialize a local Git repository. Write a Python script asking a user for a local business type, print a custom console greeting, and commit the script file to history.</p>
+                            </div>
                         </div>
                     </div>
-                    <!-- VIDEO LINK HERE -->
-                    <a href="#" class="block w-full py-2 text-center bg-sky-600 hover:bg-sky-500 rounded-lg text-sm font-semibold transition">Watch Video</a>
-                </div>
 
-                <!-- Day 2 -->
-                <div class="glass-card p-6 rounded-2xl">
-                    <span class="text-sky-400 font-bold text-sm">DAY 02</span>
-                    <h3 class="text-xl font-bold mb-3">Venv & Gemini</h3>
-                    <p class="text-slate-400 text-sm mb-4">Virtual environments and system instructions in AI Studio.</p>
-                    <div class="space-y-3 mb-6 text-xs text-slate-300">
-                        <div class="flex items-start gap-2"><i class="fas fa-check-circle text-sky-500 mt-1"></i><span>requirements.txt</span></div>
+                    <div class="card-blur rounded-xl p-6 shadow-xl relative group transition-all duration-200 hover:border-slate-700">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+                            <div class="flex items-center space-x-3">
+                                <span class="text-xs font-bold font-mono px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md border border-slate-700">DAY 02</span>
+                                <h4 class="text-base font-bold text-white">Virtual Environments, GitHub & Gemini Prompting</h4>
+                            </div>
+                            <label class="flex items-center space-x-2 bg-slate-900/60 px-3 py-1.5 rounded-lg border border-slate-800 cursor-pointer select-none text-xs text-slate-400 hover:text-slate-200">
+                                <input type="checkbox" class="day-checkbox rounded border-slate-700 text-indigo-600 focus:ring-indigo-500 bg-slate-950" onchange="calculateProgress()">
+                                <span>Mark Complete</span>
+                            </label>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-2">
+                            <div class="space-y-3">
+                                <h5 class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5"><i class="fa-solid fa-book-open text-[11px] text-indigo-400"></i> Learn Core Concepts</h5>
+                                <p class="text-xs text-slate-300 leading-relaxed">Creating isolated virtual architecture (<code class="bg-slate-950 text-indigo-300 px-1 py-0.5 rounded font-mono">python -m venv venv</code>), locking components with <code class="bg-slate-950 text-indigo-300 px-1 py-0.5 rounded font-mono">pip freeze &gt; requirements.txt</code>, configuring architectural exclusion in <code class="bg-slate-950 text-indigo-300 px-1 py-0.5 rounded font-mono">.gitignore</code>, and systemic Prompt Engineering foundations within Google AI Studio.</p>
+                                <div class="pt-2 flex flex-wrap gap-2">
+                                    <a href="https://www.youtube.com/watch?v=DVRK3G66vN0" target="_blank" class="inline-flex items-center gap-1.5 text-[11px] bg-red-600/10 text-red-400 border border-red-500/20 px-2.5 py-1 rounded-md hover:bg-red-600 hover:text-white transition-all"><i class="fa-brands fa-youtube text-xs"></i> GitHub Flow</a>
+                                    <a href="https://www.youtube.com/watch?v=A3vJpW_G0qY" target="_blank" class="inline-flex items-center gap-1.5 text-[11px] bg-red-600/10 text-red-400 border border-red-500/20 px-2.5 py-1 rounded-md hover:bg-red-600 hover:text-white transition-all"><i class="fa-brands fa-youtube text-xs"></i> Prompting Strategies</a>
+                                </div>
+                            </div>
+                            <div class="bg-slate-900/40 border border-slate-800 rounded-lg p-4 space-y-2">
+                                <h5 class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5"><i class="fa-solid fa-code text-[11px] text-emerald-400"></i> Engineering Task</h5>
+                                <p class="text-xs text-slate-300 leading-relaxed">Lock dependencies inside <code class="bg-slate-950 text-slate-300 px-1 py-0.5 rounded">requirements.txt</code>. Push your code to remote GitHub. Construct a system instruction set inside AI Studio configured to cleanly structuralize raw, messy local merchant business profile entries.</p>
+                            </div>
+                        </div>
                     </div>
-                    <!-- VIDEO LINK HERE -->
-                    <a href="#" class="block w-full py-2 text-center bg-sky-600 hover:bg-sky-500 rounded-lg text-sm font-semibold transition">Watch Video</a>
-                </div>
 
-                <!-- Day 3 -->
-                <div class="glass-card p-6 rounded-2xl">
-                    <span class="text-sky-400 font-bold text-sm">DAY 03</span>
-                    <h3 class="text-xl font-bold mb-3">Gen AI SDK & Security</h3>
-                    <p class="text-slate-400 text-sm mb-4">Mastering .env security and the Google GenAI SDK library.</p>
-                    <div class="space-y-3 mb-6 text-xs text-slate-300">
-                        <div class="flex items-start gap-2"><i class="fas fa-check-circle text-sky-500 mt-1"></i><span>API Key Management</span></div>
-                    </div>
-                    <!-- VIDEO LINK HERE -->
-                    <a href="#" class="block w-full py-2 text-center bg-sky-600 hover:bg-sky-500 rounded-lg text-sm font-semibold transition">Watch Video</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- PHASE 2 -->
-        <section class="mb-20">
-            <div class="flex items-center gap-4 mb-8">
-                <div class="h-10 w-10 rounded-lg phase-gradient-2 flex items-center justify-center font-bold">2</div>
-                <h2 class="text-2xl font-bold uppercase tracking-wider">Phase 2: Web Architectures</h2>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Day 4 -->
-                <div class="glass-card p-6 rounded-2xl">
-                    <span class="text-purple-400 font-bold text-sm">DAY 04</span>
-                    <h3 class="text-xl font-bold mb-3">Flask & Routing</h3>
-                    <p class="text-slate-400 text-sm mb-4">Setting up web routes and handling GET/POST requests.</p>
-                    <!-- VIDEO LINK HERE -->
-                    <a href="#" class="block w-full py-2 text-center bg-purple-600 hover:bg-purple-500 rounded-lg text-sm font-semibold transition">Watch Video</a>
-                </div>
-                <!-- Day 5 -->
-                <div class="glass-card p-6 rounded-2xl">
-                    <span class="text-purple-400 font-bold text-sm">DAY 05</span>
-                    <h3 class="text-xl font-bold mb-3">Forms & PRs</h3>
-                    <p class="text-slate-400 text-sm mb-4">HTML Templates (Jinja2) and GitHub Pull Requests.</p>
-                    <!-- VIDEO LINK HERE -->
-                    <a href="#" class="block w-full py-2 text-center bg-purple-600 hover:bg-purple-500 rounded-lg text-sm font-semibold transition">Watch Video</a>
-                </div>
-                <!-- Day 6 -->
-                <div class="glass-card p-6 rounded-2xl">
-                    <span class="text-purple-400 font-bold text-sm">DAY 06</span>
-                    <h3 class="text-xl font-bold mb-3">SQLite Databases</h3>
-                    <p class="text-slate-400 text-sm mb-4">Persisting data and resolving Git merge conflicts.</p>
-                    <!-- VIDEO LINK HERE -->
-                    <a href="#" class="block w-full py-2 text-center bg-purple-600 hover:bg-purple-500 rounded-lg text-sm font-semibold transition">Watch Video</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- PHASE 3 -->
-        <section class="mb-20">
-            <div class="flex items-center gap-4 mb-8">
-                <div class="h-10 w-10 rounded-lg phase-gradient-3 flex items-center justify-center font-bold">3</div>
-                <h2 class="text-2xl font-bold uppercase tracking-wider">Phase 3: Automation & Docker</h2>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Day 7 -->
-                <div class="glass-card p-6 rounded-2xl">
-                    <span class="text-orange-400 font-bold text-sm">DAY 07</span>
-                    <h3 class="text-lg font-bold mb-3">JSON Structured Outputs</h3>
-                    <!-- VIDEO LINK HERE -->
-                    <a href="#" class="block w-full py-2 text-center bg-orange-600 hover:bg-orange-500 rounded-lg text-sm font-semibold transition">Watch Video</a>
-                </div>
-                <!-- Day 8 -->
-                <div class="glass-card p-6 rounded-2xl">
-                    <span class="text-orange-400 font-bold text-sm">DAY 08</span>
-                    <h3 class="text-lg font-bold mb-3">Function Calling</h3>
-                    <!-- VIDEO LINK HERE -->
-                    <a href="#" class="block w-full py-2 text-center bg-orange-600 hover:bg-orange-500 rounded-lg text-sm font-semibold transition">Watch Video</a>
-                </div>
-                <!-- Day 9 -->
-                <div class="glass-card p-6 rounded-2xl">
-                    <span class="text-orange-400 font-bold text-sm">DAY 09</span>
-                    <h3 class="text-lg font-bold mb-3">Docker & Release</h3>
-                    <!-- VIDEO LINK HERE -->
-                    <a href="#" class="block w-full py-2 text-center bg-orange-600 hover:bg-orange-500 rounded-lg text-sm font-semibold transition">Watch Video</a>
-                </div>
-                <!-- Day 10 -->
-                <div class="glass-card p-6 rounded-2xl">
-                    <span class="text-orange-400 font-bold text-sm">DAY 10</span>
-                    <h3 class="text-lg font-bold mb-3">Final Handoff</h3>
-                    <!-- VIDEO LINK HERE -->
-                    <a href="#" class="block w-full py-2 text-center bg-orange-600 hover:bg-orange-500 rounded-lg text-sm font-semibold transition">Watch Video</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- RULES SECTION -->
-        <section class="mb-20">
-            <div class="bg-rose-500/10 border border-rose-500/20 p-8 rounded-3xl">
-                <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
-                    <i class="fas fa-shield-halved text-rose-500"></i>
-                    The 3 Golden BidaTech Rules
-                </h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="rule-card pl-4">
-                        <h4 class="font-bold text-rose-400 mb-2">1. Branch Isolation</h4>
-                        <p class="text-sm text-slate-400">Never commit to main directly. Use Pull Requests for every feature.</p>
-                    </div>
-                    <div class="rule-card pl-4">
-                        <h4 class="font-bold text-rose-400 mb-2">2. Zero Leak Policy</h4>
-                        <p class="text-sm text-slate-400">.env and .db files must be in .gitignore. Revoke leaked keys immediately.</p>
-                    </div>
-                    <div class="rule-card pl-4">
-                        <h4 class="font-bold text-rose-400 mb-2">3. Defensive Coding</h4>
-                        <p class="text-sm text-slate-400">Always wrap AI engine blocks in try-except structures.</p>
+                    <div class="card-blur rounded-xl p-6 shadow-xl relative group transition-all duration-200 hover:border-slate-700">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+                            <div class="flex items-center space-x-3">
+                                <span class="text-xs font-bold font-mono px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md border border-slate-700">DAY 03</span>
+                                <h4 class="text-base font-bold text-white">Configuration Security (.env) & The Google Gen AI SDK</h4>
+                            </div>
+                            <label class="flex items-center space-x-2 bg-slate-900/60 px-3 py-1.5 rounded-lg border border-slate-800 cursor-pointer select-none text-xs text-slate-400 hover:text-slate-200">
+                                <input type="checkbox" class="day-checkbox rounded border-slate-700 text-indigo-600 focus:ring-indigo-500 bg-slate-950" onchange="calculateProgress()">
+                                <span>Mark Complete</span>
+                            </label>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-2">
+                            <div class="space-y-3">
+                                <h5 class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5"><i class="fa-solid fa-book-open text-[11px] text-indigo-400"></i> Learn Core Concepts</h5>
+                                <p class="text-xs text-slate-300 leading-relaxed">Securing developer credentials by explicitly matching environments via <code class="bg-slate-950 text-indigo-300 px-1 py-0.5 rounded font-mono">.env</code> configurations. Programmatically interfacing via the updated <code class="bg-slate-950 text-indigo-300 px-1 py-0.5 rounded font-mono">google-genai</code> SDK instance layer, deploying structural feature branches (<code class="bg-slate-950 text-indigo-300 px-1 py-0.5 rounded font-mono">git checkout -b feature-gemini</code>).</p>
+                                <div class="pt-2 flex flex-wrap gap-2">
+                                    <a href="https://www.youtube.com/watch?v=uInunC_m9g8" target="_blank" class="inline-flex items-center gap-1.5 text-[11px] bg-red-600/10 text-red-400 border border-red-500/20 px-2.5 py-1 rounded-md hover:bg-red-600 hover:text-white transition-all"><i class="fa-brands fa-youtube text-xs"></i> Google Gen AI SDK Guide</a>
+                                </div>
+                            </div>
+                            <div class="bg-slate-900/40 border border-slate-800 rounded-lg p-4 space-y-2">
+                                <h5 class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5"><i class="fa-solid fa-code text-[11px] text-emerald-400"></i> Engineering Task</h5>
+                                <p class="text-xs text-slate-300 leading-relaxed">Create a dedicated feature branch. Build a local engine script executing an API compilation text generation model call pulling infrastructure token keys isolated inside <code class="bg-slate-950 text-slate-300 px-1 py-0.5 rounded">.env</code>. Safely merge logic clean back to the local main track.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
 
+                <div id="phase-container-2" class="phase-container space-y-6">
+                    <div class="flex items-center space-x-3 border-b border-slate-800 pb-3">
+                        <div class="h-7 w-7 rounded-lg bg-purple-600/10 text-purple-400 flex items-center justify-center font-bold text-xs">P2</div>
+                        <h3 class="text-lg font-bold tracking-tight text-white">Phase 2: Web Architectures with Flask & Databases <span class="text-xs text-slate-500 font-normal ml-2">(Days 4–6)</span></h3>
+                    </div>
+
+                    <div class="card-blur rounded-xl p-6 shadow-xl relative group transition-all duration-200 hover:border-slate-700">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+                            <div class="flex items-center space-x-3">
+                                <span class="text-xs font-bold font-mono px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md border border-slate-700">DAY 04</span>
+                                <h4 class="text-base font-bold text-white">Introduction to Flask & Routing</h4>
+                            </div>
+                            <label class="flex items-center space-x-2 bg-slate-900/60 px-3 py-1.5 rounded-lg border border-slate-800 cursor-pointer select-none text-xs text-slate-400 hover:text-slate-200">
+                                <input type="checkbox" class="day-checkbox rounded border-slate-700 text-indigo-600 focus:ring-indigo-500 bg-slate-950" onchange="calculateProgress()">
+                                <span>Mark Complete</span>
+                            </label>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-2">
+                            <div class="space-y-3">
+                                <h5 class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5"><i class="fa-solid fa-book-open text-[11px] text-indigo-400"></i> Learn Core Concepts</h5>
+                                <p class="text-xs text-slate-300 leading-relaxed">Initializing an operational Flask instance environment server structure, mapping dynamic decorators (<code class="bg-slate-950 text-indigo-300 px-1 py-0.5 rounded font-mono">@app.route('/')</code>), structuring GET/POST standard request handlers, and enforcing continuous architecture track pipeline isolation via explicit feature components.</p>
+                                <div class="pt-2 flex flex-wrap gap-2">
+                                    <a href="https://www.youtube.com/watch?v=Z1RJmh_OqeA" target="_blank" class="inline-flex items-center gap-1.5 text-[11px] bg-red-600/10 text-red-400 border border-red-500/20 px-2.5 py-1 rounded-md hover:bg-red-600 hover:text-white transition-all"><i class="fa-brands fa-youtube text-xs"></i> Flask 20-Mins Overview</a>
+                                </div>
+                            </div>
+                            <div class="bg-slate-900/40 border border-slate-800 rounded-lg p-4 space-y-2">
+                                <h5 class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5"><i class="fa-solid fa-code text-[11px] text-emerald-400"></i> Engineering Task</h5>
+                                <p class="text-xs text-slate-300 leading-relaxed">Spin up an architectural branch named <code class="bg-slate-950 text-slate-300 px-1 py-0.5 rounded font-mono">feature-flask-core</code>. Code a multi-route functional UI site matrix containing an indexing landing landing interface alongside a targeted merchant portfolio view. Push to remote origin.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-blur rounded-xl p-6 shadow-xl relative group transition-all duration-200 hover:border-slate-700">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+                            <div class="flex items-center space-x-3">
+                                <span class="text-xs font-bold font-mono px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md border border-slate-700">DAY 05</span>
+                                <h4 class="text-base font-bold text-white">Web Forms, Templates & GitHub Pull Requests</h4>
+                            </div>
+                            <label class="flex items-center space-x-2 bg-slate-900/60 px-3 py-1.5 rounded-lg border border-slate-800 cursor-pointer select-none text-xs text-slate-400 hover:text-slate-200">
+                                <input type="checkbox" class="day-checkbox rounded border-slate-700 text-indigo-600 focus:ring-indigo-500 bg-slate-950" onchange="calculateProgress()">
+                                <span>Mark Complete</span>
+                            </label>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-2">
+                            <div class="space-y-3">
+                                <h5 class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5"><i class="fa-solid fa-book-open text-[11px] text-indigo-400"></i> Learn Core Concepts</h5>
+                                <p class="text-xs text-slate-300 leading-relaxed">Compiling responsive frontend interfaces via template inheritance using Jinja2 token passing blocks. Capturing processing dataset dictionaries natively using Flask parsing modules via <code class="bg-slate-950 text-indigo-300 px-1 py-0.5 rounded font-mono">request.form.get()</code>. Managing teamwork integration protocols by staging structured platform Pull Requests (PRs) via GitHub.</p>
+                                <div class="pt-2 flex flex-wrap gap-2">
+                                    <a href="https://www.youtube.com/watch?v=rgbCcQikVLo" target="_blank" class="inline-flex items-center gap-1.5 text-[11px] bg-red-600/10 text-red-400 border border-red-500/20 px-2.5 py-1 rounded-md hover:bg-red-600 hover:text-white transition-all"><i class="fa-brands fa-youtube text-xs"></i> Mastering PR Management</a>
+                                </div>
+                            </div>
+                            <div class="bg-slate-900/40 border border-slate-800 rounded-lg p-4 space-y-2">
+                                <h5 class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5"><i class="fa-solid fa-code text-[11px] text-emerald-400"></i> Engineering Task</h5>
+                                <p class="text-xs text-slate-300 leading-relaxed">Construct an active intake text payload collection dashboard interface form allowing merchants to transmit profile segment fields and company procedural bottlenecks. Commit changes, host an interactive remote PR tracker line, and safely execute target merge operations.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-blur rounded-xl p-6 shadow-xl relative group transition-all duration-200 hover:border-slate-700">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+                            <div class="flex items-center space-x-3">
+                                <span class="text-xs font-bold font-mono px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md border border-slate-700">DAY 06</span>
+                                <h4 class="text-base font-bold text-white">SQLite Database Integration & Resolving Git Conflicts</h4>
+                            </div>
+                            <label class="flex items-center space-x-2 bg-slate-900/60 px-3 py-1.5 rounded-lg border border-slate-800 cursor-pointer select-none text-xs text-slate-400 hover:text-slate-200">
+                                <input type="checkbox" class="day-checkbox rounded border-slate-700 text-indigo-600 focus:ring-indigo-500 bg-slate-950" onchange="calculateProgress()">
+                                <span>Mark Complete</span>
+                            </label>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-2">
+                            <div class="space-y-3">
+                                <h5 class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5"><i class="fa-solid fa-book-open text-[11px] text-indigo-400"></i> Learn Core Concepts</h5>
+                                <p class="text-xs text-slate-300 leading-relaxed">Establishing localized datastore persistency configurations implementing relational SQLite relational table mappings schemas. Discovering advanced team conflict tracking mechanisms by isolating, parsing, and resolving conflicting Git code merges manually without destructive historical rewrites.</p>
+                                <div class="pt-2 flex flex-wrap gap-2">
+                                    <a href="https://www.youtube.com/watch?v=AMp6hlA8xKA" target="_blank" class="inline-flex items-center gap-1.5 text-[11px] bg-red-600/10 text-red-400 border border-red-500/20 px-2.5 py-1 rounded-md hover:bg-red-600 hover:text-white transition-all"><i class="fa-brands fa-youtube text-xs"></i> Flask DB System Integration</a>
+                                </div>
+                            </div>
+                            <div class="bg-slate-900/40 border border-slate-800 rounded-lg p-4 space-y-2">
+                                <h5 class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5"><i class="fa-solid fa-code text-[11px] text-emerald-400"></i> Engineering Task</h5>
+                                <p class="text-xs text-slate-300 leading-relaxed">Wire your day 5 form engine block logic to input transactional table items straight inside a <code class="bg-slate-950 text-slate-300 px-1 py-0.5 rounded font-mono">local_biz.db</code> database instance tracking model. Artificially stage a strict line conflict scenario across intersecting code tracks, parse the diff flags manually, and push the clean resolution clear to remote main.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="phase-container-3" class="phase-container space-y-6">
+                    <div class="flex items-center space-x-3 border-b border-slate-800 pb-3">
+                        <div class="h-7 w-7 rounded-lg bg-purple-600/10 text-purple-400 flex items-center justify-center font-bold text-xs">P3</div>
+                        <h3 class="text-lg font-bold tracking-tight text-white">Phase 3: AI Automation, Tools & Containerization <span class="text-xs text-slate-500 font-normal ml-2">(Days 7–10)</span></h3>
+                    </div>
+
+                    <div class="card-blur rounded-xl p-6 shadow-xl relative group transition-all duration-200 hover:border-slate-700">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+                            <div class="flex items-center space-x-3">
+                                <span class="text-xs font-bold font-mono px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md border border-slate-700">DAY 07</span>
+                                <h4 class="text-base font-bold text-white">Automation via Structured JSON Outputs & Git Stash</h4>
+                            </div>
+                            <label class="flex items-center space-x-2 bg-slate-900/60 px-3 py-1.5 rounded-lg border border-slate-800 cursor-pointer select-none text-xs text-slate-400 hover:text-slate-200">
+                                <input type="checkbox" class="day-checkbox rounded border-slate-700 text-indigo-600 focus:ring-indigo-500 bg-slate-950" onchange="calculateProgress()">
+                                <span>Mark Complete</span>
+                            </label>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-2">
+                            <div class="space-y-3">
+                                <h5 class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5"><i class="fa-solid fa-book-open text-[11px] text-indigo-400"></i> Learn Core Concepts</h5>
+                                <p class="text-xs text-slate-300 leading-relaxed">Forcing LLM engine responses to align strictly with reliable, machine-readable validation schemas utilizing explicit <code class="bg-slate-950 text-indigo-300 px-1 py-0.5 rounded font-mono">response_mime_type="application/json"</code> parameters. Deploying temporary storage management operations to clean working tracks via <code class="bg-slate-950 text-indigo-300 px-1 py-0.5 rounded font-mono">git stash</code>.</p>
+                                <div class="pt-2 flex flex-wrap gap-2">
+                                    <a href="https://www.youtube.com/watch?v=jW9S87v_gGg" target="_blank" class="inline-flex items-center gap-1.5 text-[11px] bg-red-600/10 text-red-400 border border-red-500/20 px-2.5 py-1 rounded-md hover:bg-red-600 hover:text-white transition-all"><i class="fa-brands fa-youtube text-xs"></i> Structured Outputs Setup</a>
+                                </div>
+                            </div>
+                            <div class="bg-slate-900/40 border border-slate-800 rounded-lg p-4 space-y-2">
+                                <h5 class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5"><i class="fa-solid fa-code text-[11px] text-emerald-400"></i> Engineering Task</h5>
+                                <p class="text-xs text-slate-300 leading-relaxed">Program an automation tracking script configured to input unstructured, handwritten manual transactional billing receipts descriptions blocks from shopkeepers and constrain Gemini parsing parameters to spit out verified, valid array object matrices.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-blur rounded-xl p-6 shadow-xl relative group transition-all duration-200 hover:border-slate-700">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+                            <div class="flex items-center space-x-3">
+                                <span class="text-xs font-bold font-mono px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md border border-slate-700">DAY 08</span>
+                                <h4 class="text-base font-bold text-white">Automated Data Sourcing via Gemini Function Calling</h4>
+                            </div>
+                            <label class="flex items-center space-x-2 bg-slate-900/60 px-3 py-1.5 rounded-lg border border-slate-800 cursor-pointer select-none text-xs text-slate-400 hover:text-slate-200">
+                                <input type="checkbox" class="day-checkbox rounded border-slate-700 text-indigo-600 focus:ring-indigo-500 bg-slate-950" onchange="calculateProgress()">
+                                <span>Mark Complete</span>
+                            </label>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-2">
+                            <div class="space-y-3">
+                                <h5 class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5"><i class="fa-solid fa-book-open text-[11px] text-indigo-400"></i> Learn Core Concepts</h5>
+                                <p class="text-xs text-slate-300 leading-relaxed">Configuring systemic API capability schemas passing advanced native <code class="bg-slate-950 text-indigo-300 px-1 py-0.5 rounded font-mono">types.Tool</code> structures to grant autonomous models the operational intelligence to intercept execution paths and route contextual parameter queries straight back to python execution functions.</p>
+                                <div class="pt-2 flex flex-wrap gap-2">
+                                    <a href="https://www.youtube.com/watch?v=Zndp7R36Pco" target="_blank" class="inline-flex items-center gap-1.5 text-[11px] bg-red-600/10 text-red-400 border border-red-500/20 px-2.5 py-1 rounded-md hover:bg-red-600 hover:text-white transition-all"><i class="fa-brands fa-youtube text-xs"></i> Function Calling Agents</a>
+                                </div>
+                            </div>
+                            <div class="bg-slate-900/40 border border-slate-800 rounded-lg p-4 space-y-2">
+                                <h5 class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5"><i class="fa-solid fa-code text-[11px] text-emerald-400"></i> Engineering Task</h5>
+                                <p class="text-xs text-slate-300 leading-relaxed">Construct a live automation processing sequence loop engine that isolates a merchant category, commands Gemini to select and call a custom diagnostic data retrieval method, and logs localized target market industry trend records into your local SQL engine storage.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-blur rounded-xl p-6 shadow-xl relative group transition-all duration-200 hover:border-slate-700">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+                            <div class="flex items-center space-x-3">
+                                <span class="text-xs font-bold font-mono px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md border border-slate-700">DAY 09</span>
+                                <h4 class="text-base font-bold text-white">Assembling the Full Web App & Docker Packaging</h4>
+                            </div>
+                            <label class="flex items-center space-x-2 bg-slate-900/60 px-3 py-1.5 rounded-lg border border-slate-800 cursor-pointer select-none text-xs text-slate-400 hover:text-slate-200">
+                                <input type="checkbox" class="day-checkbox rounded border-slate-700 text-indigo-600 focus:ring-indigo-500 bg-slate-950" onchange="calculateProgress()">
+                                <span>Mark Complete</span>
+                            </label>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-2">
+                            <div class="space-y-3">
+                                <h5 class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5"><i class="fa-solid fa-book-open text-[11px] text-indigo-400"></i> Learn Core Concepts</h5>
+                                <p class="text-xs text-slate-300 leading-relaxed">Interlocking independent application components (Flask server routes + SQLite database schema layers + structural Gemini intelligent runtime workers). Authoring optimized, multi-stage production-ready <code class="bg-slate-950 text-indigo-300 px-1 py-0.5 rounded font-mono">Dockerfile</code> configurations and pinning historical distribution commits deploying annotated repository flags (<code class="bg-slate-950 text-indigo-300 px-1 py-0.5 rounded font-mono">git tag -a v1.0</code>).</p>
+                                <div class="pt-2 flex flex-wrap gap-2">
+                                    <a href="https://www.youtube.com/watch?v=pTFZFxd4hOI" target="_blank" class="inline-flex items-center gap-1.5 text-[11px] bg-red-600/10 text-red-400 border border-red-500/20 px-2.5 py-1 rounded-md hover:bg-red-600 hover:text-white transition-all"><i class="fa-brands fa-youtube text-xs"></i> Docker Containers Masterclass</a>
+                                </div>
+                            </div>
+                            <div class="bg-slate-900/40 border border-slate-800 rounded-lg p-4 space-y-2">
+                                <h5 class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5"><i class="fa-solid fa-code text-[11px] text-emerald-400"></i> Engineering Task</h5>
+                                <p class="text-xs text-slate-300 leading-relaxed">Package your completed integrated solution stack inside an independent Docker runtime container wrapper. Validate environment executions using explicit runtime flags (<code class="bg-slate-950 text-slate-300 px-1 py-0.5 rounded font-mono">docker run --env-file .env</code>), lock a baseline distribution tag (<code class="bg-slate-950 text-slate-300 px-1 py-0.5 rounded">v1.0</code>), and push upstream.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-blur rounded-xl p-6 shadow-xl relative group transition-all duration-200 hover:border-slate-700">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+                            <div class="flex items-center space-x-3">
+                                <span class="text-xs font-bold font-mono px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md border border-slate-700">DAY 10</span>
+                                <h4 class="text-base font-bold text-white">Code Refactoring, Logs & Documentation Handoff</h4>
+                            </div>
+                            <label class="flex items-center space-x-2 bg-slate-900/60 px-3 py-1.5 rounded-lg border border-slate-800 cursor-pointer select-none text-xs text-slate-400 hover:text-slate-200">
+                                <input type="checkbox" class="day-checkbox rounded border-slate-700 text-indigo-600 focus:ring-indigo-500 bg-slate-950" onchange="calculateProgress()">
+                                <span>Mark Complete</span>
+                            </label>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-2">
+                            <div class="space-y-3">
+                                <h5 class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5"><i class="fa-solid fa-book-open text-[11px] text-indigo-400"></i> Learn Core Concepts</h5>
+                                <p class="text-xs text-slate-300 leading-relaxed">Refactoring repetitive code blocks to ensure maintainability. Inspecting application behaviors and operational logs directly using execution streams (<code class="bg-slate-950 text-indigo-300 px-1 py-0.5 rounded font-mono">docker logs</code>) to monitor diagnostic patterns. Building enterprise-standard repository documentation architectures using clean markdown formatting rules.</p>
+                                <div class="pt-2 flex flex-wrap gap-2">
+                                    <a href="https://www.youtube.com/watch?v=EorD_wPld6M" target="_blank" class="inline-flex items-center gap-1.5 text-[11px] bg-red-600/10 text-red-400 border border-red-500/20 px-2.5 py-1 rounded-md hover:bg-red-600 hover:text-white transition-all"><i class="fa-brands fa-youtube text-xs"></i> Writing Technical Readmes</a>
+                                </div>
+                            </div>
+                            <div class="bg-slate-900/40 border border-slate-800 rounded-lg p-4 space-y-2">
+                                <h5 class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5"><i class="fa-solid fa-code text-[11px] text-emerald-400"></i> Engineering Task</h5>
+                                <p class="text-xs text-slate-300 leading-relaxed">Clean up duplicate programming sequences across application blocks, author an immaculate repo <code class="bg-slate-950 text-slate-300 px-1 py-0.5 rounded font-mono">README.md</code> blueprint detailing specific setup and runtime operations config workflows, and submit your absolute build tracking link in your sync channel!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </main>
 
-    <footer class="text-center pb-10 text-slate-500 text-sm">
-        &copy; 2024 BidaTech AI Engineering. Built for the next generation of AI Engineers.
+    <footer class="mt-20 border-t border-slate-800 bg-slate-950/60 py-6 text-center text-xs text-slate-500">
+        <p>&copy; 2026 BidaTech AI Engineering. All Rights Reserved. Built for internal self-learning application distribution.</p>
     </footer>
 
+    <script>
+        function calculateProgress() {
+            const checkboxes = document.querySelectorAll('.day-checkbox');
+            const totalDays = checkboxes.length;
+            let checkedDays = 0;
+
+            checkboxes.forEach(box => {
+                if(box.checked) {
+                    checkedDays++;
+                    // Styling parents dynamically when completed
+                    box.closest('.card-blur').classList.add('border-emerald-500/30', 'bg-emerald-950/5');
+                } else {
+                    box.closest('.card-blur').classList.remove('border-emerald-500/30', 'bg-emerald-950/5');
+                }
+            });
+
+            const percent = Math.round((checkedDays / totalDays) * 100);
+            
+            // Updating numeric metrics
+            document.getElementById('progress-text').innerText = percent + "%";
+            
+            // Syncing the SVG Stroke Dashoffset
+            const radius = 40;
+            const circumference = 2 * Math.PI * radius; // ~251.2
+            const offset = circumference - (percent / 100) * circumference;
+            document.getElementById('progress-ring').style.strokeDashoffset = offset;
+
+            // Updating structural descriptors based on percentage tiers
+            const desc = document.getElementById('progress-desc');
+            if(percent === 100) desc.innerText = "All applications deployed cleanly! 🎉";
+            else if(percent > 50) desc.innerText = "Building momentum. Keep pushing! 🚀";
+            else if(checkedDays > 0) desc.innerText = "Journey initiated. Write great code.";
+            else desc.innerText = "Click daily tasks to mark progress";
+        }
+
+        function switchPhase(phase) {
+            // Manage UI Filtering
+            const containers = document.querySelectorAll('.phase-container');
+            const tabs = document.querySelectorAll('.phase-tab');
+
+            // Reset Active tab highlighting
+            tabs.forEach(t => t.classList.remove('active', 'bg-gradient-to-r', 'from-2563eb', 'to-7c3aed', 'text-white'));
+            tabs.forEach(t => {
+                if(!t.classList.contains('active')) {
+                    t.className = "phase-tab w-full text-left px-3 py-2 rounded-lg text-xs font-medium text-slate-400 hover:bg-slate-800 hover:text-slate-200 transition-all duration-200 flex flex-col gap-0.5";
+                }
+            });
+
+            // Re-apply special layout selectors to selected targets
+            const targetTab = document.getElementById(`tab-${phase}`);
+            targetTab.className = "phase-tab active w-full text-left px-3 py-2 rounded-lg text-xs font-semibold tracking-wide transition-all duration-200 flex flex-col gap-0.5";
+
+            containers.forEach(container => {
+                if(phase === 'all') {
+                    container.style.display = 'block';
+                } else {
+                    if(container.id === `phase-container-${phase}`) {
+                        container.style.display = 'block';
+                    } else {
+                        container.style.display = 'none';
+                    }
+                }
+            });
+        }
+
+        // Initialize progress ring values baseline setup
+        window.onload = function() {
+            const radius = 40;
+            const circumference = 2 * Math.PI * radius;
+            document.getElementById('progress-ring').style.strokeDasharray = circumference;
+            document.getElementById('progress-ring').style.strokeDashoffset = circumference;
+        }
+    </script>
 </body>
 </html>
